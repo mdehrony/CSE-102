@@ -1,0 +1,1250 @@
+Problem No: 01
+Problem Name: A program to find the largest of the three numbers.
+Algorithm:
+Step-1: Start.
+Step-2: Read three number a, b, c.
+Step-3: Check if(a>b) if yes, then goto step 4 else goto step 5. 
+Step-4:Check if(a>c)print “a is the greatest” of goto step 6 else print “c is the greatest” of goto step 6.
+Step-5: End.
+Flow chart: 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b){
+        if(a>c) printf("%d is the largest number",a);
+            else printf("%d is the largest number",c);
+    }
+    else{
+        if(b>c) printf("%d is the largest number",b);
+            else printf("%d is the largest number",c);
+    }
+    return 0;
+}
+Output:
+-1  -5  -9
+-1 is the largest number
+-3  -8  -9
+-3 is the largest number
+Discussion:
+This program is a successful C program which identify the largest number from three number. Showing the program with its output.
+
+
+Problem No: 02
+Problem Name: A program to calculate the interest value from the amount, interest rate and period.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables year and period.
+Step 3: Read three float type variable amount,inrate,value.
+Step 4: Print a statement.
+Step 5: Input three values.
+Step 6: print a statement.
+Step 7: Assign year =1.
+Step 8: Initialize a while loop and set its condition as year is less than or equal to period.
+Step 9: Calculate value = amount +inrate*amount.Then print the value of value and year in the next line. Assign amount =value and increment year by 1. Repeat step 9 until year is greater than or equal period.
+Step 10: End.
+
+
+
+Flowchart:
+ 
+
+
+Program Code:
+#include <stdio.h>
+int main()
+{
+    int year,period;
+    float amount,inrate,value;
+    printf("Input amount , interest rate and period\n\n");
+    scanf("%f%f%d",&amount,&inrate,&period);
+    printf("\n"); year=1;
+    while(year<=period)
+    {
+        value=amount + inrate * amount;
+        printf("%2d Rs %8.2f\n",year,value);
+        amount=value;
+        year++;
+    }
+    return 0;
+}
+Output:
+Input amount, interest rate and period
+
+10000 0.14 5
+
+ 1 Rs 11400.00
+ 2 Rs 12996.00
+ 3 Rs 14815.44
+ 4 Rs 16889.60
+ 5 Rs 19254.15
+Discussion:
+This program is a successful C program which identify the interest from three value such as amount,interest rate and period.Showing the program with its output.
+
+
+Problem No: 03
+Problem Name: Solution of the quadratic equation.
+Algorithm:
+Step 1: start.
+Step 2: Read six double variable a,b,c,p,x1,x2 .
+Step 3: print a statement.
+Step 4: Input a,b,c;
+Step 5: Calculate p=(b*b)-(4*a*c).
+Step 6: Check  if p is less than 0 or not. If p is less than 0 then print Roots are imaginary. If p is greater than 0 then go to step 7.
+Step 7: Calculate r1=(-b+square root of (p))/(2*a) and r2=(-b-square root of (P))/(2*a).
+Step 8: print the values of r1 and r2.
+Step 9: End .
+Flowchart:
+ 
+Program Code:
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    double a, b, c, r1, r2, p;
+    printf("Input values of a,b and c\n");
+    scanf("%lf%lf%lf", &a, &b, &c);
+    p = (b * b) - (4 * a * c);
+    if (p < 0)
+        printf("The roots are imaginary\n");
+    else
+    {
+        r1 = (-b + (sqrt(p))) / (2 * a);
+        r2 = (-b - (sqrt(p))) / (2 * a);
+        printf("Root1 = %.2lf  and   Root2 = %.2lf\n\n", r1, r2);
+    }
+    return 0;
+}
+Output:
+Input values of a,b and c
+2 4 6
+The roots are imaginary
+Input values of a,b and c
+3 59  88
+Root1 = -1.63  and   Root2 = -18.04
+Discussion:
+This program is a successful C program which identify the roots from three value.Showing the program with its output.
+
+
+Problem No: 04
+Problem Name: Fahrenheit to Celsius conversation with c.
+Algorithm:
+Step 1: Start.
+Step 2: Read two double variable fahrenheit,celsius.
+Step 3: Print a statement.
+Step 4: Input fahrenheit.
+Step 5: Calculate celsius=(fahrenheit-32)*5/9;
+Step 6: print the value of Celsius.
+Step 7: End.
+Flowchart: 
+
+Program Code:
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    double fahrenheit, celsius;
+    printf("\n Enter the temperature in Fahrenheit\n");
+    scanf("%lf", &fahrenheit);
+    celsius = ((fahrenheit - 32) * 5) / 9;
+    printf(“%.2lf Fahrenheit = %.2lf     Celsius\n”,fahrenheit,celsius);
+    return 0;
+}
+Output:
+Enter the temperature in Fahrenheit
+555.00
+555.00 Fahrenheit = 290.56     Celsius
+Discussion:
+This program is a successful C program which find out the Celsius value from any Fahrenheit value. Showing the program with its output.
+
+
+
+
+
+
+Problem No: 05
+Problem Name:  Celsius to Fahrenheit conversation with c.
+Algorithm:
+Step 1: Start.
+Step 2: Read two double variable fah,cel.
+Step 3: Print a statement.
+Step 4: Input celsius.
+Step 5: Assign fah=(celsius*9/5)+32.
+Step 6: print the value of fahrenheit.
+Step 7: End.
+Flowchart:
+ 
+
+Program Code:
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    double fahrenheit, celsius;
+    printf("\nEnter the temperature in Celsius\n");
+    scanf("%lf", &celsius);
+    fahrenheit=(celsius*9/5)+32;
+    printf("%.2lf Celsius = %.2lf Fahrenheit\n\n", celsius, fahrenheit);
+    return 0;
+}
+Output:
+Enter the temperature in Celsius
+0
+0.0	Celsius = 32.00 Fahrenheit
+Discussion:
+This program is a successful C program which find out the Fahrenheit value from any Celsius value. Showing the program with its output.
+
+
+Problem No:06
+Problem Name: Process of loan application and to sanction loans.
+Algorithm:
+Step 1: Start.
+Step 2: Read five integer value.
+Step 3: Input 3 integer l1,l2,l3.
+Step 4: Put the summation of l2 and l3 in sum variable.
+Step 5: If l1 is greater than 0 then snl is zero otherwise go to step 6.
+Step 6: if l1 is less than 0 then check if sum is greater than 50000 or not. If sum is greater than 50000 then snl=50000-l2 otherwise snl =l3.
+Step 7: Print the sanctioned loan.
+Step 8: End.
+Flowchart: 
+Program Code:
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int l1,l2,l3,snl=0,sum=0;
+    printf("\nEnter the value of previous two loans : ");
+    scanf("%d%d",&l1,&l2);
+    printf("Enter the new loan : \n");
+    scanf("%d",&l3);
+    sum=l3+l2;
+    if(l1>0)
+    {
+        snl=0;
+    }
+    else
+    {
+        if(sum>50000)
+          snl=50000-l2;
+        else
+         snl=l3;
+    }
+    printf("loan sanctioned = %d\n\n",snl);
+    return 0;
+}
+Output:
+Enter the value of previous two loans : 8000 6000
+Enter the new loan :
+9000
+loan sanctioned = 0
+Enter the value of previous two loans : 0 5000
+Enter the new loan :
+60000
+loan sanctioned = 45000
+Discussion:
+This program is a successful C program which identify the sanction loan from three value which are the two previous loan and a new loan. Showing the program with its output.
+
+
+
+Problem No: 07
+Problem Name:  Print a number triangle.
+Algorithm:
+Step 1: Start.
+Step 2: Read one integer.
+Step 3: Input a number in variable a.
+Step 4: Initialize a for loop which run a+1 times. Then initialize a nested for loop which will run for i+1 times and print the number from 0 to i.
+Step 5: End.
+Flowchart :
+
+ 
+
+Program Code:
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int a,i,j;
+    printf("\nEnter the range : ");
+    scanf("%d",&a);
+    for(i=0;i<=a;i++)
+    {
+        for(j=0;j<=i;j++)
+         printf("%d ",j);
+         printf("\n");
+    }
+ printf("\n");
+    return 0;
+}
+Output:
+Enter the range : 10
+0
+0 1
+0 1 2
+0 1 2 3
+0 1 2 3 4
+0 1 2 3 4 5
+0 1 2 3 4 5 6
+0 1 2 3 4 5 6 7
+0 1 2 3 4 5 6 7 8
+0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9 10
+Discussion:
+This program is a successful C program which display a triangle of a number which is the input value. Showing the program with its output.
+
+
+Problem No: 08
+Problem Name:  Input a number to display a pyramid.
+Algorithm:
+Step 1: Start.
+Step 2: Read the row number from user.
+Step 3: Print a pyramid of star using for loop.
+Step 4: End.
+Flow chart:
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+    int row,col,n;
+    printf("\nEnter a number for generating the pyramid:\n ");
+    scanf("%d",&n);
+    for(row = 1; row <= n; row++)
+    {
+        for(col = 1; col <= n - row; col++)
+            printf(" ");
+        for(col = 1; col <= 2 * row - 1; col++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+Output:
+Enter a number for generating the pyramid:
+  5
+    *
+   ***
+  *****
+ *******
+*********
+Discussion:
+This program is a successful C program which display a pyramid of star of the input value. Showing the program with its output.
+
+
+Problem No: 09
+Problem Name:  Find grade of a number by using Switch statement.
+Algorithm:
+Step 1: Start.
+Step 2: Input a number in variable mark.
+Step 3:Switch mark/10.
+Step 4:If case 10,9,8:then print A+ and go to step 10.
+Step 5:Case 7: then print A and go to step 10.
+Step 6: Case 6: then print A- and go to step 10.
+Step 7: Case 5: then print B and go to step 10.
+Step 8: Case 4: then print C and go to step 10.
+Step 9: Default print F and go to step 10.
+Step 10: End.
+Flowchart :
+ Program Code:
+#include<stdio.h>
+int main()
+{
+    int mark;
+    scanf("%d",&mark);
+    int score = mark/10;
+    switch(score)
+    {
+    case 10:
+    case 9:
+    case 8:
+      printf("Your grade is A+");
+      break;
+    case 7:
+      printf("Your grade is A");
+      break;
+    case 6:
+      printf("Your grade is A-");
+      break;
+    case 5:
+      printf("Your grade is B");
+      break;
+    case 4:
+      printf("Your grade is C");
+      break;
+    Default:
+      printf("You will be fail");
+    } }
+Output:
+55
+Your grade is B
+Discussion:
+This program is a successful C program which display a grade of the input value by using switch statement. Showing the program with its output.
+
+Problem No: 10
+Problem Name:  Find grade of a number by using If else statement.
+Algorithm:
+Step 1: Start.
+Step 2: Input m.
+Step 3: If m<=100 && m>=80 then, print ‘A+’ and goto step 9.
+Step 4:  if m<=79 && m>=70 then print  ‘A’ and go to step 9.
+Step 5: if m<=69 && m>=60 then print  ‘A-’ and go to step 9.
+Step 6: if m<=59 && m>=50 then print  ‘B’ and go to step 9.
+Step 7: if m<=49 && m>=40 then, print ‘C’ and go to step 9.       
+Step 8:  print ‘F’.
+Step 9: End.
+Flowchart :
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+    int m;
+    printf("Enter your mark : ");
+    scanf("%d",&m);
+    if(m<=100 && m>=80)
+        printf("Your grade is = 'A+'");
+    else if(m<=79 && m>=70)
+        printf("Your grade is = 'A'");
+    else if(m<=69 && m>=60)
+        printf("Your grade is = 'A-'");
+    else if(m<=59 && m>=50)
+        printf("Your grade is = 'B'");
+    else if(m<=49 && m>=40)
+         printf("Your grade is = 'C'");
+    else
+        printf("Your grade is = 'F'");
+    return 0;
+}
+Output:
+Enter your mark : 77
+Your grade is = 'A'
+Discussion:
+This program is a successful C program which display a grade of an the input value by using if else statement. Showing the program with its output.
+
+
+
+Problem No: 11
+Problem Name:  Use of break statement.
+Algorithm:
+Step 1: Start.
+Step 2:Print 3 statement.
+Step 3: Read one integer variable and 3 float variable.
+Step 4:If m<=1000 read a number x from the line.
+Step 5:If x<0 break the for loop and print total number,average,sum and goto step 7. 
+Step 6:Else assign sum=sum+x and m++ after that return to step 4.
+Step 7: End.
+Flowchart:
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+    int m;
+    float x,sum,average;
+    printf("This program computes the average of a set of numbers\n");
+    printf("Enter values one after another\n");
+    printf("Enter a negative number at the end.\n");
+    sum = 0;
+    for(m=1;m <= 1000 ; m++)
+    {
+        scanf("%f",&x);
+        if(x < 0) break;
+        sum += x;
+    }
+    average = sum/(float)(m-1);
+    printf("Number of values = %d\n",m-1);
+    printf("Sum = %f\n",sum);
+    printf("Average =%f\n",average);
+}
+Output:
+This program computes the average of a set of numbers
+Enter values one after another
+Enter a negative number at the end.
+7 8 9 -9
+Number of values = 3
+Sum = 24.000000
+Average =8.000000
+Discussion:
+This program is a successful C program which display a break statement. Showing the program with its output.
+
+
+Problem No: 12
+Problem Name:  A program to evaluate a series.
+Algorithm:
+Step 1: Start .
+Step 2: Read one integer value and three double variable.
+Step 3: input x and assign tm=1 and n=1.
+Step 4: Initialize a for loop which will run until n<=100.
+   Step 4.1 : assign sum=sum+tm.
+   Step 4.2: if tm is less than or equal 0.001 then go to step 7 otherwise goto step 4.3
+   Step 4.3:  Assign tm*=x and n=n+1 and go to step 4.
+Step 5: Print n is not sufficient to to achieve the desired accuracy.
+Step 6: Go to step 8.
+Step 7: Print the sum.
+Step 8: End.
+Flowchart :
+
+ 
+
+
+Program Code:
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double x,tm,sum=0;
+    int n;
+    printf("Enter the value : \n");
+    scanf("%lf",&x);
+    for(tm=1,n=1;n<=100;n++)
+    {
+        sum+=tm;
+        if(tm<=0.0001)
+          goto p;
+          tm*=x;
+    }
+    printf("n is not sufficient to achieve the desired accuracy\n\n");
+    goto z;
+    p:
+    printf("Sum = %lf\n",sum);
+    z:
+  return 0;
+}
+Output:
+Enter the value :
+.55
+Sum = 2.222137
+Enter the value :
+.77
+Sum = 4.347552
+Discussion:
+This program is a successful C program to evaluate the series. Showing the program with its output.
+
+
+
+Problem No: 13
+Problem Name:  Use of continue statement.
+Algorithm:
+Step 1: Start.
+Step 2:Print one statement.
+Step 3: Read two integer variable and  two double variable.
+Step 4:initialize c=0 and neg=0.
+Step 5:while c<=100,read a number.
+Step 6:If number is 9999 break the loop and go to step 10.
+Step 7:Otherwise if  the number is less than 0 ,print number is negative,assign neg++ and continue the loop.
+Step 8:Else print the number and square root,assign c++ and return to step 5.
+Step 9:Print the number of terms and negative terms.
+Step 10: End.
+Flowchart :
+ Program Code:
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int c,neg;
+  double num,sqroot;
+  printf("Enter 9999 to stop\n");
+  c=0;
+  neg=0;
+  while(c<=100)
+  {
+      printf("Enter the number : ");
+      scanf("%lf",&num);
+      if(num==9999)break;
+      if(num<0){
+        printf("This number is negative.\n");
+        neg++;
+        continue;
+      }
+      else{
+        sqroot=sqrt(num);
+        printf("The number is : %lf\n square root of this number is : %lf \n",num,sqroot);
+        c++;
+      }
+  }
+  printf("Number of terms = %d\n",c);
+  printf("Number of Negative terms = %d\n",neg);
+  return 0;
+}
+Output:
+Enter 9999 to stop
+Enter the number : 3
+The number is : 3.000000
+ square root of this number is : 1.732051
+Enter the number : -4.4
+This number is negative.
+Enter the number : 0
+The number is : 0.000000
+ square root of this number is : 0.000000
+Enter the number : 9999
+Number of terms = 2
+Number of Negative terms = 1
+Discussion:
+This program is a successful C program which display a continue statement. Showing the program with its output.
+Problem No: 14
+Problem Name:  Use of goto statement.
+Algorithm:
+Step 1: Start.
+Step 2:Print a statement
+ Step 3: Read one integer and two double variable.
+Step  2: Initialize count = 0 
+ Step 4: Read a number “x” from user.
+Step 5:  if number is negative print number is negative.
+Step 6: else print the number and square root of the number. 
+Step 7: increment the count.
+Step 8: if count<5 goto read lebel otherwise go to step 4.
+Step 9: End.
+Flowchart:
+ 
+
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+    double x,y;
+    int count;
+    count = 0;
+    printf("Enter FIVE real values in a LINE \n");
+read:
+    scanf("%lf",&x);
+    if(x < 0) printf("Value - %d is a negative\n",count);
+    else {
+        y = sqrt(x);
+        printf("%lf\t %lf\n",x,y);
+    }
+    count = count + 1;
+    if(count < 5)
+        goto read;
+    printf("End of computation");
+    return 0;
+}
+Output:
+Enter FIVE real values in a LINE
+5.66 7 8 -9 9.5
+5.660000         2.379075
+7.000000         2.645751
+8.000000         2.828427
+Value - 3 is a negative
+9.500000         3.082207
+End of computation
+Discussion:
+This program is a successful C program which display a goto statement by using some input value. Showing the program with its output.
+
+Problem No: 15
+Problem Name:  Find the rang of a series of value.
+Algorithm:
+Step 1: Start.
+Step 2: Read one integer variable and 6 float variable.
+Step 3: Take  a input and increment cnt by 1.
+Step 4: Check if a is greater than 0 or not. If a is greater than 0 then go to next step 5 otherwise go to step 10 .
+Step 5: If count is equal to 1 then assign high=low=input value.
+Step 6: If  the input value is greater than high then assign high=input value.
+Step 7: If the input value is less the low then assign low=input value.
+Step 8: Add the input value in the sum variable.
+Step 9: Goto to step 3.
+Step 10: Print the highest and lowest values and the average and the range of the numbers.
+Step 11: End.
+Flowchart :
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+    int count;
+    float value,high,low,sum,average,range;
+    sum = 0;
+    count = 0;
+    printf("Enter numbers in a line: input a NEGATIVE number to end\n");
+    input:
+        scanf("%f",&value);
+        if(value < 0) goto output;
+        count = count + 1;
+        if(count == 1) high = low = value;
+        else if(value > high) high = value;
+        else if(value < low) low = value;
+        sum = sum + value;
+        goto input;
+    output:
+        average = sum/count;
+        range = high - low;
+        printf("Total values : %d\n",count);
+        printf("Highest-value: %f and Lowest-value: %f\n",high,low);
+        printf("Range : %f and Average: %f\n",range,average);
+}
+Output:
+Enter numbers in a line: input a NEGATIVE number to end
+77 88 99 33 -1
+Total values : 4
+Highest-value: 99.000000 and Lowest-value: 33.000000
+Range : 66.000000 and Average: 74.250000
+Discussion:
+This program is a successful C program which display a rang of a series of value. When a negative value inputted the program will be ended. Showing the program with its output.
+
+
+Problem No: 16
+Problem Name: A program to print the ODD number from 1 to N using while loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input n.
+Step 4: Print a statement.
+Step 5: Assign i=1.
+Step 6: Initialize a while loop and set its condition as iis less than or equal to n.
+Step 7: Then print I and increment i by 2. Repeat step 7 until i is greater than or equal to the n.
+Step 8: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+printf("ODD number: \n");
+i = 1;
+while(i<= n)
+{
+printf("%d\n",i);
+i = i + 2;
+}
+return 0;
+}
+Output:
+7
+ODD number:
+1
+3
+5
+7
+Discussion:
+This program is a successful C program which identify the ODD number from 1 to N.Showing the program with its output.
+
+
+
+
+Problem No:17
+Problem Name: A program to find the EVEN number from 1 to N by using while loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input one value.
+Step 4: Print a statement.
+Step 5: Assign i=0.
+Step 6: Initialize a while loop and set its condition asi is less than or equal to the input value n. 
+Step 7: Then print the I and  increment i by 2. Repeat step 7 until i is greater than or equal to the n.
+Step 8: End.
+Flow chart:
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+printf("Even number: \n");
+i = 0;
+while(i<= n)
+{
+printf("%d\n",i);
+i = i + 2;
+}
+return 0;
+}
+Output:
+5
+Even number:
+0
+2
+4
+
+Discussion:
+This program is a successful C program which identify the EVEN number from 1 to N. Showing the program with its output.
+
+
+Problem No: 18
+Problem Name: A program to print all uppercase alphabets using while loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read one character type variable.
+Step 3: Assign alphabets = A.
+Step 4: Print a statement. 
+Step 5: Initialize a while loop and set its condition as alphabets is less than or equal to Z. 
+Step 6: Then print the alphabets and increment number by 1. Repeat step 6 until alphabets is greater than or equal to Z.
+Step 7: End.
+Flow chart:
+ 
+
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+char alphabets;
+alphabets = 'A';
+printf("uppercase alphabets: \n");
+while(alphabets <= 'Z')
+{
+printf("%c",alphabets);
+alphabets++;
+}
+return 0;
+}
+Output:
+uppercase alphabets:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Discussion:
+This program is a successful C program which print all uppercase alphabets. Showing the program with its output.
+
+
+
+
+Problem No: 19
+Problem Name: A program to print all lowercase alphabets using while loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read one character type variable.
+Step 3: Assign alphabets = a.
+Step 4: Print a statement. 
+Step 5: Initialize a while loop and set its condition as alphabets is less than or equal to z. 
+Step 6: Then print the alphabets and  increment  alphabets by 1. Repeat step 6 until alphabets is greater than or equal to z.
+Step 7: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+char alphabets;
+alphabets = 'a';
+printf("lowercase alphabets: \n");
+while(alphabets <= 'z')
+{
+printf("%c\n",alphabets);
+alphabets++;
+}
+return 0;
+}
+Output:
+lowercase alphabets:
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+Discussion:
+This program is a successful C program which print all lowercase alphabets. Showing the program with its output.
+
+Problem No: 20
+Problem Name: A program to print the numbers from 1 to N using for loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input n.
+Step 4: Print a statement.
+Step 5: Initialize a for loop, assign i =1, set its condition as i is less than or equal to the n and increment i by 1.
+Step 6: Then print i. Repeat step 6 until i is greater than or equal to the n. 
+Step 7: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+printf("all number: \n");
+for(i = 1;i <= n;i++)
+{
+printf("%d\n",i);
+}
+return 0;
+}
+Output:
+7
+all number:
+1
+2
+3
+4
+5
+6
+7
+Discussion:
+This program is a successful C program which print all number from 1 to N by using for loop. Showing the program with its output.
+
+
+
+Problem No: 21
+Problem name: A program to print numbers from 1 to 10 using while loop.
+Algorithm:
+Step 1: Start.
+Step 2: Read one integer type variables.
+Step 3: Print a statement. 
+Step 4: Assign i =1.
+Step 5: Initialize a while loop and set its condition asi is less than or equal to 10. 
+Step 6: Then print the i and  increment i by 1. Repeat step 6 until i is greater than or equal to 10.
+Step 7: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i;
+printf("numbers: \n");
+i = 1;
+while(i<= 10)
+{
+printf("%d\n",i);
+i++;
+}
+return 0;
+}
+Output:
+numbers:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Discussion:
+This program is a successful C program which print numbers from 1 to 10 using while loop.Showing the program with its output.
+
+
+Problem No: 22
+Problem Name: A program to find factorial of a number.
+Algorithm:
+Step 1: Start.
+Step 2: Read three integer type variables.
+Step 3: Initialize m = 1.
+Step 4: Input n.
+Step 5: Initialize a for loop ,assign i =1, set its condition as i is less than or equal to n and  increment i by 1.
+Step 6:m = m *i. Repeat step 6 until i is greater than or equal to n. 
+Step 7: Then print the m and the n.
+Step 8: End.
+Flow chart:
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,m = 1,n;
+scanf("%d",&n);
+for(i = 1; i<= n; i++)
+{
+m = m*i;
+}
+printf("%d is factorial of %d\n",m,n);
+return 0;
+}
+Output:
+5
+120 is factorial of 5
+Discussion:
+This program is a successful C program which find factorial of a number. Showing the program with its output.
+
+
+
+
+
+Problem No: 23
+Problem Name: A program to find sum of first N natural number, N must be taken by user.
+Algorithm:
+Step 1: Start.
+Step 2: Read three integer type variables.
+Step 3: Initialize sum= 0.
+Step 4: Input n.
+Step 5: Initialize a for loop, assign i =1, set its condition as i is less than or equal to the n and increment i by 1.
+Step 6: sum = sum+i. Repeat step 6 until i is greater than or equal to the n. 
+Step 7: Then print the sum.
+Step 8: End.
+Flow chart:
+ 
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n,sum = 0;
+scanf("%d",&n);
+for(i = 1;i <= n;i++)
+{
+sum+=i;
+}printf("sum: %d\n",sum);
+return 0;
+}
+Output:
+5
+sum: 15
+Discussion:
+This program is a successful C program which input a value and sum all the number from 1 to the input value. Showing the program with its output.
+
+
+
+Problem No: 24
+Problem Name: A program to print all prime number from 1 to N.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input n.
+Step 4: Print a statement.
+Step 5: Initialize a for loop ,assign i =1, set its condition as i is less than or equal to the input value n and  increment i by 1.
+Step 6: If the i divide by 2,3,5,7 individually and its reminder is zero then print a statement else print the i. Repeat step 6 until i is greater than or equal to the n.
+Step 7: End.
+Flowchart: 
+
+
+
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+printf("prime number: \n");
+for(i = 1;i <= n;i++)
+{
+if(i%2 ==0 || i % 3 ==0 || i% 5 == 0 || i % 7 == 0)
+printf("");
+else printf("%d\n",i);
+}
+return 0;
+}
+Output:
+20
+prime number:
+1
+11
+13
+17
+19
+Discussion:
+This program is a successful C program which print all prime number from 1 to N. Here input a value and print all the prime number from 1 to the input value. Showing the program with its output.
+
+
+
+Problem No: 25
+Problem Name: A program to print all even and odd numbers from 1 to N.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input n.
+Step 4: Initialize a for loop. Assign i =1, set its condition as i is less than or equal to the input value and increment i by 1.
+Step 5:Ifi divide by 2 and its reminder is zero then print thei such a even number. Else print the i such an odd number. Repeat step 5 until i is greater than or equal to n.
+Step 6: End.
+Flowchart:
+ 
+
+
+
+
+
+
+
+
+
+
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+for(i = 1; i<= n; i++)
+{
+if(i%2 ==0) printf("EVEN number: %d\n",i);
+else printf("ODD number: %d\n",i);
+}
+return 0;
+}
+Output:
+10
+ODD number: 1
+EVEN number: 2
+ODD number: 3
+EVEN number: 4
+ODD number: 5
+EVEN number: 6
+ODD number: 7
+EVEN number: 8
+ODD number: 9
+EVEN number: 10
+Discussion:
+This program is a successful C program which print all even and odd numbers from 1 to the input value. Showing the program with its output.
+
+
+
+Problem No: 26
+Problem Name: A program to print square cube and square root of all number from 1 to N.
+Algorithm:
+Step 1: Start.
+Step 2: Read 4 integer type variables and one float type variable.
+Step 3: Input n.
+Step 4: Initialize a for loop ,assigni =1, set its condition as i is less than or equal to the n and  increment i by 1.
+Step 5:Square = i * i,cube =  i * i * i,square root is the root of that i.Then print the square,cube and square root. Repeat step 5 until i is greater than or equal to thei.
+Step 6: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n,square,cube;
+float sqroot;
+scanf("%d",&n);
+for(i = 1;i <= n;i++)
+{
+square = i*i;
+cube = i*i*i;
+sqroot = sqrt(i);
+printf("%d\n",square);
+printf("%d\n",cube);
+printf("%2.2f\n",sqroot);
+}
+return 0;
+}
+Output:
+5
+1
+1
+1.00
+4
+8
+1.41
+9
+27
+1.73
+16
+64
+2.00
+25
+125
+2.24
+Discussion:
+This program is a successful C program which print square, cube and square root of all number from 1 to the input value. Showing the program with its output.
+
+Problem No: 27
+Problem Name: A program to print all leap year from 1 to N.
+Algorithm:
+Step 1: Start.
+Step 2: Read two integer type variables.
+Step 3: Input n.
+Step 4: Initialize a for loop, assign i =1, set its condition as i is less than or equal to the n and increment i by 1.
+Step 5: If i divide by 400,4,100 individually and its reminder is zero then print it is a leap year. Else print an another statement. Repeat step 5 until i is greater than or equal to the n.
+Step 6: End.
+Flow chart:
+ 
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,n;
+scanf("%d",&n);
+for(i = 1;i <= n;i++){
+if (i % 400 == 0) printf("%d is a leap year\n",i);
+else{
+if(i % 4 == 0 &&i % 100 != 0)
+printf("%d is a leap year\n",i);
+else printf("");
+}
+}
+return 0;
+}
+Output:
+50
+4 is a leap year
+8 is a leap year
+12 is a leap year
+16 is a leap year
+20 is a leap year
+24 is a leap year
+28 is a leap year
+32 is a leap year
+36 is a leap year
+40 is a leap year
+44 is a leap year
+48 is a leap year
+Discussion:
+This program is a successful C program which to print all leap year from 1 to the input value. Showing the program with its output.
+
+	
+
+Problem No: 28
+Problem name: A program to read age of 15 persons and count total baby age, school age and adult age.
+Algorithm:
+Step 1: Start.
+Step 2: Read 3 integer type variables.
+Step 3: Input one value.
+Step 4: If input value is 15 then Initialize a for loop, assign number =1, set its condition as number is less than or equal to the input value and increment number by 1. Then input one age.
+Step 5:If the age is greater than 0 and smaller than 6 then print it is a baby age. Else if  the age is greater than  and equal 6 and smaller than 18 then print it is a school age. Else print it is an adult age. Repeat step 5 until number is greater than or equal to 15.
+Step 6: End.
+Flow chart:
+ 
+
+
+
+Program Code:
+#include<stdio.h>
+int main()
+{
+int i,age,n;
+scanf("%d",&n);
+//baby age "0<age<6"
+//school age "6<= age < 18"
+//adult age "18<= age"
+if(n == 15){
+for(i = 1;i <= n;i++){
+scanf("%d",&age);
+if (age > 0 && age < 6) printf("%d is a baby age\n",age);
+else if (age >=6 && age < 18) printf("%d is a school age\n",age);
+else printf("%d is a adult age\n",age);
+}
+}
+return 0;
+}
+Output:
+45
+45 is a adult age
+5
+5 is a baby age
+8
+8 is a school age
+8
+8 is a school age
+44
+44 is a adult age
+8
+8 is a school age
+90
+90 is a adult age
+33
+33 is a adult age
+7
+7 is a school age
+8
+8 is a school age
+56
+56 is a adult age
+44
+44 is a adult age
+6
+6 is a school age
+Discussion:
+This program is a successful C program which to read age of 15 person and count total baby age, school age and adult age. Showing the program with its output.
+
